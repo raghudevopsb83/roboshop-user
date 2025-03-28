@@ -1,24 +1,5 @@
 name: User CI
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
-  Build:
-    runs-on: self-hosted
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo Build
-
-  Test:
-    runs-on: self-hosted
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo Tests
-
-  Deploy:
-    runs-on: self-hosted
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo Tests
-
+  common:
+    uses: raghudevopsb83/github-actions-reusable/.github/workflows/ci.yaml@main
