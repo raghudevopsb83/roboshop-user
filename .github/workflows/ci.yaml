@@ -1,5 +1,0 @@
-name: User CI
-on: [push, workflow_dispatch]
-jobs:
-  common:
-    uses: raghudevopsb83/github-actions-reusable/.github/workflows/ci.yaml@main

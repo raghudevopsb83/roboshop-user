@@ -1,0 +1,13 @@
+name: CI - Dev BRanch
+on:
+  push:
+    branches:
+      - "RB**"
+jobs:
+  common:
+    uses: raghudevopsb83/github-actions-reusable/.github/workflows/ci-dev-br.yaml@main
+    with:
+      component_name: user
+
+
+
